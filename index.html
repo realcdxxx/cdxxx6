@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>个人网页</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      nav {
+        background: #333;
+        color: #ffffff;
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 12px;
+        display: block;
+        font-size: 12px; /* 调整字体大小 */
+        position: relative;
+      }
+
+      nav ul li a:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 10px;
+        white-space: nowrap;
+      }
+
+      header {
+        text-align: center;
+        background: url("https://s11.ax1x.com/2024/01/18/pFAmO74.jpg") no-repeat
+          center center/cover;
+        padding: 60px 0;
+      }
+
+      header h1 {
+        margin: 0;
+        color: #fff;
+        font-size: 24px; /* 调整字体大小 */
+      }
+
+      section {
+        padding: 11px;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .skills {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; /* 新增这行以换行显示技能 */
+      }
+
+      .skill {
+        text-align: center;
+        margin: 10px; /* 新增这行以增加按钮之间的间距 */
+      }
+
+      .progress-bar {
+        background: #3498db; /* 蓝色用于进度条 */
+        color: #fff;
+        width: 60px; /* 调整宽度 */
+        padding: 3px; /* 调整内边距 */
+        border-radius: 3px;
+        font-size: 10px; /* 调整字体大小 */
+      }
+
+      footer {
+        background: #333;
+        color: #ffffff;
+        text-align: center;
+        padding: 8px 0;
+      }
+
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+
+        nav ul li {
+          margin: 0;
+        }
+
+        .skills {
+          flex-direction: column;
+        }
+      }
+      .contact-button {
+        padding: 1px 15px;
+        background-color: #ffffff;
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#home" data-tooltip="回到首页">首页</a></li>
+        <li>
+          <a
+            href="https://s11.ax1x.com/2024/01/18/pFAQDQ1.jpg"
+            data-tooltip="查看微信二维码"
+            >WeChat</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://realcdxxx.github.io/cmm1/"
+            data-tooltip="查看友情链接"
+            >友情链接</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://realcdxxx.github.io/cdxxx2/"
+            data-tooltip="查看历史版本"
+            >历史版本</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>你好，我是cdxxx</h1>
+      <p></p>
+      <img
+        src="https://s11.ax1x.com/2024/01/18/pFAmlk9.png"
+        alt="个人照片"
+        width="60px"
+        height="60px"
+      />
+    </header>
+
+    <section id="about-me">
+      <h2>关于我</h2>
+      <p>
+        99年摩羯座、北京读研、自学前端和java中、23年美团数据标注实习、参与优化算法、希望广交朋友、共同进步
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>爱好</h2>
+      <p></p>
+      <p>
+        健身、动漫（进击的巨人，藤本树）、音乐（周杰伦，李荣浩，比伯）、游戏（金铲铲）
+      </p>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills">
+      <h2>技能</h2>
+      <div class="skills">
+        <div class="skill">
+          <p>前端</p>
+          <div class="progress-bar" style="width: 80%">80%</div>
+        </div>
+        <div class="skill">
+          <p>JAVA</p>
+          <div class="progress-bar" style="width: 80%">25%</div>
+        </div>
+        <div class="skill">
+          <p>爬虫</p>
+          <div class="progress-bar" style="width: 80%">75%</div>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <footer>
+      <p style="font-size: small">@2024 V2.0</p>
+      <p style="font-size: small">联系电话: 159-9416-1231</p>
+      <p style="font-size: small">电子邮箱: cdx99123@qq.com</p>
+      <a href="tel:15994161231" class="contact-button">拨打电话</a>
+      <a href="mailto:cdx99123@qq.com" class="contact-button">发送邮件</a>
+    </footer>
+    <script>
+      document
+        .querySelector('a[href="#home"]')
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector("body").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+    </script>
+  </body>
+</html>
